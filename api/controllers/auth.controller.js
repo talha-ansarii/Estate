@@ -30,7 +30,7 @@ export const register = async (req, res) => {
 };
 
 export const login = async (req, res) => {
-    const { email, password } = req.body;
+    const { email, password } = req?.body;
     console.log(email, password)
   try {
 
@@ -40,7 +40,7 @@ export const login = async (req, res) => {
         }
     })
 
-    // console.log(user)
+    console.log(user)
 
     const {password : userPassword , ...userInfo} = user;
     
