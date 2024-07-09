@@ -12,10 +12,7 @@ import serverless from 'serverless-http';
 
 const app = express();
 
-// app.use(cors({
-//     origin: process.env.CLIENT_URL,
-//     credentials: false 
-// }))
+app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
 
